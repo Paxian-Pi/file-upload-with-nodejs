@@ -1,0 +1,96 @@
+[debug] [2022-07-31T15:50:20.692Z] ----------------------------------------------------------------------
+[debug] [2022-07-31T15:50:20.695Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\HP\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2022-07-31T15:50:20.696Z] CLI Version:   11.4.0
+[debug] [2022-07-31T15:50:20.696Z] Platform:      win32
+[debug] [2022-07-31T15:50:20.696Z] Node Version:  v16.14.1
+[debug] [2022-07-31T15:50:20.758Z] Time:          Sun Jul 31 2022 16:50:20 GMT+0100 (West Africa Standard Time)
+[debug] [2022-07-31T15:50:20.759Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-07-31T15:50:20.767Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2022-07-31T15:50:20.833Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-07-31T15:50:20.834Z] > authorizing via signed-in user (upius_pax@hotmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\HP\Documents\App Development\NodeJs\file-upload
+
+[debug] [2022-07-31T15:50:21.570Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2022-07-31T15:50:21.571Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 
+[debug] [2022-07-31T15:51:53.556Z] > refreshing access token with scopes: []
+[debug] [2022-07-31T15:51:53.561Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2022-07-31T15:51:53.561Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2022-07-31T15:51:54.033Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2022-07-31T15:51:54.033Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2022-07-31T15:51:54.134Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects [none]
+[debug] [2022-07-31T15:51:54.134Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"projectId":"file-upload-with-nodejs","name":"file-upload-with-nodejs"}
+[debug] [2022-07-31T15:51:55.834Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects 200
+[debug] [2022-07-31T15:51:55.834Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"name":"operations/cp.6844893493242844781"}
+[debug] [2022-07-31T15:51:55.837Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.6844893493242844781 [none]
+[debug] [2022-07-31T15:51:57.364Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.6844893493242844781 200
+[debug] [2022-07-31T15:51:57.365Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.6844893493242844781 {"name":"operations/cp.6844893493242844781"}
+[debug] [2022-07-31T15:51:57.868Z] [Project Creation Poller] Retrying task index 0
+[debug] [2022-07-31T15:51:57.871Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.6844893493242844781 [none]
+[debug] [2022-07-31T15:51:59.515Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.6844893493242844781 200
+[debug] [2022-07-31T15:51:59.515Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.6844893493242844781 {"name":"operations/cp.6844893493242844781","metadata":{"@type":"type.googleapis.com/google.cloudresourcemanager.v1.ProjectCreationStatus","gettable":true,"ready":true},"done":true,"response":{"@type":"type.googleapis.com/google.cloudresourcemanager.v1.Project","projectNumber":"312582421954","projectId":"file-upload-with-nodejs","lifecycleState":"ACTIVE","name":"file-upload-with-nodejs","createTime":"2022-07-31T15:51:56.716Z"}}
+[debug] [2022-07-31T15:51:59.525Z] >>> [apiv2][query] POST https://firebase.googleapis.com/v1beta1/projects/file-upload-with-nodejs:addFirebase [none]
+[debug] [2022-07-31T15:52:02.586Z] <<< [apiv2][status] POST https://firebase.googleapis.com/v1beta1/projects/file-upload-with-nodejs:addFirebase 200
+[debug] [2022-07-31T15:52:02.587Z] <<< [apiv2][body] POST https://firebase.googleapis.com/v1beta1/projects/file-upload-with-nodejs:addFirebase {"name":"operations/workflows/NmUzZDFiYWQtNTI1OS00YTczLWExZDgtY2MxZWZiMTljOTFm"}
+[debug] [2022-07-31T15:52:02.591Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/operations/workflows/NmUzZDFiYWQtNTI1OS00YTczLWExZDgtY2MxZWZiMTljOTFm [none]
+[debug] [2022-07-31T15:52:04.032Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/operations/workflows/NmUzZDFiYWQtNTI1OS00YTczLWExZDgtY2MxZWZiMTljOTFm 200
+[debug] [2022-07-31T15:52:04.033Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/operations/workflows/NmUzZDFiYWQtNTI1OS00YTczLWExZDgtY2MxZWZiMTljOTFm {"name":"operations/workflows/NmUzZDFiYWQtNTI1OS00YTczLWExZDgtY2MxZWZiMTljOTFm"}
+[debug] [2022-07-31T15:52:04.547Z] [Add Firebase Poller] Retrying task index 0
+[debug] [2022-07-31T15:52:04.549Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/operations/workflows/NmUzZDFiYWQtNTI1OS00YTczLWExZDgtY2MxZWZiMTljOTFm [none]
+[debug] [2022-07-31T15:52:05.557Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/operations/workflows/NmUzZDFiYWQtNTI1OS00YTczLWExZDgtY2MxZWZiMTljOTFm 200
+[debug] [2022-07-31T15:52:05.557Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/operations/workflows/NmUzZDFiYWQtNTI1OS00YTczLWExZDgtY2MxZWZiMTljOTFm {"name":"operations/workflows/NmUzZDFiYWQtNTI1OS00YTczLWExZDgtY2MxZWZiMTljOTFm"}
+[debug] [2022-07-31T15:52:06.565Z] [Add Firebase Poller] Retrying task index 0
+[debug] [2022-07-31T15:52:06.567Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/operations/workflows/NmUzZDFiYWQtNTI1OS00YTczLWExZDgtY2MxZWZiMTljOTFm [none]
+[debug] [2022-07-31T15:52:08.496Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/operations/workflows/NmUzZDFiYWQtNTI1OS00YTczLWExZDgtY2MxZWZiMTljOTFm 200
+[debug] [2022-07-31T15:52:08.497Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/operations/workflows/NmUzZDFiYWQtNTI1OS00YTczLWExZDgtY2MxZWZiMTljOTFm {"name":"operations/workflows/NmUzZDFiYWQtNTI1OS00YTczLWExZDgtY2MxZWZiMTljOTFm"}
+[debug] [2022-07-31T15:52:10.503Z] [Add Firebase Poller] Retrying task index 0
+[debug] [2022-07-31T15:52:10.506Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/operations/workflows/NmUzZDFiYWQtNTI1OS00YTczLWExZDgtY2MxZWZiMTljOTFm [none]
+[debug] [2022-07-31T15:52:11.703Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/operations/workflows/NmUzZDFiYWQtNTI1OS00YTczLWExZDgtY2MxZWZiMTljOTFm 200
+[debug] [2022-07-31T15:52:11.704Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/operations/workflows/NmUzZDFiYWQtNTI1OS00YTczLWExZDgtY2MxZWZiMTljOTFm {"name":"operations/workflows/NmUzZDFiYWQtNTI1OS00YTczLWExZDgtY2MxZWZiMTljOTFm","done":true,"response":{"@type":"type.googleapis.com/google.firebase.service.v1beta1.FirebaseProject","projectId":"file-upload-with-nodejs","projectNumber":"312582421954","displayName":"file-upload-with-nodejs","name":"projects/file-upload-with-nodejs","resources":{"hostingSite":"file-upload-with-nodejs"}}}
+[info] 
+[info] === Your Firebase project is ready! ===
+[info] 
+[info] Project information:
+[info]    - Project ID: file-upload-with-nodejs
+[info]    - Project Name: file-upload-with-nodejs
+[info] 
+[info] Firebase console is available at
+[info] https://console.firebase.google.com/project/file-upload-with-nodejs/overview
+[info] i  Using project file-upload-with-nodejs (file-upload-with-nodejs) 
+[info] 
+=== Hosting Setup
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
+[debug] [2022-07-31T15:53:36.994Z] >>> [apiv2][query] GET https://www.gstatic.com/firebasejs/releases.json [none]
+[debug] [2022-07-31T15:53:37.608Z] <<< [apiv2][status] GET https://www.gstatic.com/firebasejs/releases.json 200
+[debug] [2022-07-31T15:53:37.608Z] <<< [apiv2][body] GET https://www.gstatic.com/firebasejs/releases.json {"current":{"version":"9.9.1","browserURL":"https://www.gstatic.com/firebasejs/9.9.1/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/9.9.1/firebase.tgz"},"live":{"version":"9.9","browserURL":"https://www.gstatic.com/firebasejs/live/9.9/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/live/9.9/firebase.tgz"},"components":{"analytics":"https://www.gstatic.com/firebasejs/9.9.1/firebase-analytics.js","app":"https://www.gstatic.com/firebasejs/9.9.1/firebase-app.js","app-check":"https://www.gstatic.com/firebasejs/9.9.1/firebase-app-check.js","auth":"https://www.gstatic.com/firebasejs/9.9.1/firebase-auth.js","auth/cordova":"https://www.gstatic.com/firebasejs/9.9.1/firebase-auth/cordova.js","auth/react-native":"https://www.gstatic.com/firebasejs/9.9.1/firebase-auth/react-native.js","functions":"https://www.gstatic.com/firebasejs/9.9.1/firebase-functions.js","firestore":"https://www.gstatic.com/firebasejs/9.9.1/firebase-firestore.js","firestore/lite":"https://www.gstatic.com/firebasejs/9.9.1/firebase-firestore/lite.js","installations":"https://www.gstatic.com/firebasejs/9.9.1/firebase-installations.js","storage":"https://www.gstatic.com/firebasejs/9.9.1/firebase-storage.js","performance":"https://www.gstatic.com/firebasejs/9.9.1/firebase-performance.js","remote-config":"https://www.gstatic.com/firebasejs/9.9.1/firebase-remote-config.js","messaging":"https://www.gstatic.com/firebasejs/9.9.1/firebase-messaging.js","messaging/sw":"https://www.gstatic.com/firebasejs/9.9.1/firebase-messaging/sw.js","database":"https://www.gstatic.com/firebasejs/9.9.1/firebase-database.js","firestore.memory":"https://www.gstatic.com/firebasejs/9.9.1/firebase-firestore.memory.js"}}
+[debug] [2022-07-31T15:53:38.022Z] Error: ENOTDIR: not a directory, scandir 'C:\Users\HP\Documents\App Development\NodeJs\file-upload\server.js'
+    at Object.readdirSync (node:fs:1392:3)
+    at Object.createFileSync (C:\Users\HP\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\fs-extra\lib\ensure\file.js:55:10)
+    at Config.writeProjectFile (C:\Users\HP\AppData\Roaming\npm\node_modules\firebase-tools\lib\config.js:152:12)
+    at C:\Users\HP\AppData\Roaming\npm\node_modules\firebase-tools\lib\config.js:176:22
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async doSetup (C:\Users\HP\AppData\Roaming\npm\node_modules\firebase-tools\lib\init\features\hosting\index.js:52:5)
+    at async init (C:\Users\HP\AppData\Roaming\npm\node_modules\firebase-tools\lib\init\index.js:36:9)
+[error] 
+[error] Error: An unexpected error has occurred.
